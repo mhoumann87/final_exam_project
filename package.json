@@ -1,28 +1,7 @@
 {
-  "name": "final_exam_project",
-  "version": "0.0.1",
-  "description": "The final exam project about Ro's torv",
+  "name": "routing-app",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mhoumann87/final_exam_project.git"
-  },
-  "keywords": [
-    "ros",
-    "torv",
-    "exam",
-    "final"
-  ],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mhoumann87/final_exam_project/issues"
-  },
-  "homepage": "https://github.com/mhoumann87/final_exam_project#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "latest"
   }
 }

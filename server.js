@@ -1,17 +1,19 @@
-//get all the pacages we need
-var express     = require('express');
-var app         = express();
-var path        = require('path');
-var port        = process.env.PORT || 8080;
+// get the things we need
+var express = require('express');
+var app     = express();
+var path = require('path');
+var config = require('./config');
 
-//configure the public assets folder
-app.use(express.static(__dirname + 'public'));
+// set the public folder to serve public assets
+app.use(express.static(__dirname + '/public'));
 
-//route to send index.html
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/public/app/views/index.html'));
+// set up our one route to the index.html file
+app.get('*', function(req, res) {
+	res.sendFile(path.join(__dirname + '/public/app/views/index.html'));
 });
 
-//start the server
-app.listen(port);
-console.log('http://localhost:' + port);
+// Initialize the app
+var server = app.listen(config.port, function () {
+	var port = server.address().port;
+	console.log("App now running on port", port);
+});

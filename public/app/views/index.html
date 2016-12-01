@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ro's Torv Exam Project</title>
+	<link rel="icon" type="image/png" href="../../assets/img/icon.png">
+	<!-- set the base path for angular routing -->
+	<base href="/">
+
+	<!-- CSS -->
+	<!-- load bootstrap and fontawesome via CDN -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css">
+	<!-- load googlefonts for use in project -->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:300" rel="stylesheet">
+	<!-- load local stylesheet -->
+	<link rel="stylesheet" href="../../assets/css/style.css" type="text/css">
+	<!-- this part is moved to local style sheet	
+	<style>
+		body { padding-top:50px; }
+	</style> -->
+
+	<!-- JS -->
+	<!-- load angular and angular-route via CDN -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
+	<script src="app/app.routes.js"></script>
+	<script src="app/app.js"></script>
+</head>
+<body ng-app="routerApp" ng-controller="mainController as main">
+	
+ 	<!-- HEADER AND NAVBAR -->
+	<header>
+		<a href="/"><img src="../../assets/img/logo.png" class="ro-logo"></a>
+
+		<nav class="container navigation">
+			
+				<div class="menuknap"><a href="/">Forside</a></div>
+				<div class="menuknap"><a href="#">Alt om Ro's Torv</a></div>
+				<div class="menuknap"><a href="#">Butikker</a></div>
+				<div class="menuknap aktiv"><a href="/ugens_tilbud">Ugens tilbud</a></div>
+				<div class="menuknap"><a href="/about">Aktiviteter</a></div>
+				<div class="menuknap"><a href="/about">Åbnings Tider</a></div>
+				<div class="menuknap"><a href="/about">Gavekort</a></div>
+				<div class="menuknap"><a href="/about">Ro's Torv+</a></div>
+				
+		</nav>
+	</header>
+	
+	<!-- MAIN CONTENT AND INJECTED VIEWS -->
+	<main class="container">
+		<!-- angular templating will go here -->
+		<!-- this is where content will be injected -->
+
+		<div ng-view>
+			 
+		</div>
+
+	</main>
+
+</body>
+</html>	
